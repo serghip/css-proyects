@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //Tamaño de pantalla
+    function resizeListener() {
+        return window.innerHeight;
+    }
+    function resizer() {
+        let container = document.getElementById('container');
+        let value = resizeListener();
+        container.style = `height: ${value}px`;
+    }
+    window.addEventListener("resize", () => {
+        resizer();
+    });
+    window.addEventListener("load", () => {
+        resizer()
+    });
+</script>
+<style>
+    /* Quita los set default*/
+    * {
+        margin: 0px;
+        padding: 0px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #container {
+        display: grid;
+        place-items: center;
+        background-color: burlywood;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <h1>¡ Hola mi querido mundillo !</h1>
+    </div>
+
+</body>
+
+</html>
